@@ -887,5 +887,121 @@ ul {
 /* End Testimonials */
 
 /* Start Team Members */
+.team {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+}
 
-/* Start Team Members */
+.team .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.team .container .box {
+  position: relative;
+}
+
+.team .container .box::before,
+.team .container .box:after {
+  content: "";
+  position: absolute;
+  background-color: #222;
+  top: 0;
+  right: 0;
+  height: 100%;
+  border-radius: 10px;
+  transition: var(--main-transition);
+}
+
+.team .container .box::before {
+  width: calc(100% - 60px);
+  z-index: -2;
+}
+
+.team .container .box::after {
+  width: 0;
+  z-index: -1;
+  background-color: #111;
+}
+
+.team .container .box:hover::after {
+  width: calc(100% - 60px);
+}
+
+.team .container .box .data {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 60px;
+}
+
+.team .container .box .data img {
+  width: calc(100% - 60px);
+  border-radius: 10px;
+  transition: var(--main-transition);
+  filter: brightness(0.8);
+}
+
+.team .container .box:hover .data img {
+  filter: brightness(0.4);
+}
+
+.team .container .box .data .social {
+  width: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.team .container .box .data .social a {
+  width: 60px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: var(--main-transition);
+}
+
+.team .container .box .data .social i {
+  color: #777;
+  font-size: 20px;
+}
+
+.team .container .box .data .social a:hover i {
+  color: var(--hover-color);
+}
+
+.team .container .box .details {
+  padding-left: 80px;
+  padding-top: 20px;
+}
+
+.team .container .box .details h3 {
+  margin-bottom: 0;
+  color: var(--main-color);
+  font-size: 22px;
+  transition: var(--main-transition);
+}
+
+.team .container .box .details p {
+  margin-top: 10px;
+  margin-bottom: 25px;
+  color: #888;
+}
+
+.team .container .box:hover .details h3 {
+  color: #888;
+}
+
+@media (max-width: 678px) {
+  .team .container .box::before {
+    width: 100%;
+  }
+  .team .container .box:hover::after {
+    width: 100%;
+  }
+}
+/* End Team Members */
