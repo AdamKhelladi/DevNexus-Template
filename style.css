@@ -1,12 +1,13 @@
 /* Start Var */
 :root {
-  --main-color: #068bf7;
+  --main-color: #00e6c0;
   --secondary-color: #111;
-  --hover-color: #004aeb;
+  --hover-color: #00ac86;
+  --box-shadow-color: #00d4b19f;
   --gray-color: #cacaca;
   --main-transition: .3s;
   --section-padding: 100px;
-}
+} 
 /* End Var */
 
 /* Start Global Rules  */
@@ -195,9 +196,9 @@ ul {
   transition: var(--main-transition);
 }
 
-.header .container .main-nav > li a:hover {
+.header .container .main-nav > li > a:hover {
   color: #ececec;
-  background-color: #008cff1f;
+  background-color: #00ac872d;
 }
 
 .header .container .main-nav > li a::before {
@@ -266,7 +267,7 @@ ul {
   width: 0%;
   top: 0;
   left: 0;
-  background-color: #008cff1f;
+  background-color: #00ac871a;
   transition: var(--main-transition);
 }
 
@@ -467,7 +468,7 @@ ul {
 
 .article .container .card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 0 12px #005ba5ad;
+  box-shadow: 0 0 12px var(--box-shadow-color);
 }
 
 .article .container .card .text {
@@ -644,7 +645,7 @@ ul {
   background-color: #ff3c00;
 }
 .features .container .box.time .image::before {
-  background-color: #009b7a;
+  background-color: #068bf7;
 }
 .features .container .box.passion .image::before {
   background-color: #ff004c;
@@ -693,7 +694,7 @@ ul {
   background-color: #ff3c00;
 }
 .features .container .box.time .details h1::before {
-  background-color: #009b7a;
+  background-color: #068bf7;
 }
 .features .container .box.passion .details h1::before {
   background-color: #ff004c;
@@ -730,6 +731,7 @@ ul {
   cursor: pointer;
   position: relative;
   transition: var(--main-transition);
+  border-radius: 10px;
 }
 
 .features .container .box.quality .btn button {
@@ -740,10 +742,10 @@ ul {
 }
 
 .features .container .box.time .btn button {
-  border-color: #009b7a;
+  border-color: #068bf7;
 }
 .features .container .box.time .btn button {
-  color: #009b7a;
+  color: #068bf7;
 }
 
 .features .container .box.passion .btn button {
@@ -768,7 +770,7 @@ ul {
   background-color: #ff3c00;
 }
 .features .container .box.time .btn button::before {
-  background-color: #009b7a;
+  background-color: #068bf7;
 }
 .features .container .box.passion .btn button::before {
   background-color: #ff004c;
@@ -786,7 +788,7 @@ ul {
   transform: translateY(-10px);
 }
 .features .container .box.time:hover {
-  box-shadow: 0 0 12px #009b798a;
+  box-shadow: 0 0 12px #068bf783;
   transform: translateY(-10px);
 }
 .features .container .box.passion:hover {
@@ -800,5 +802,86 @@ ul {
   padding-top: var(--section-padding);
   padding-bottom: var(--section-padding);
   background-color: #111
+}
+
+.testimonials .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  column-gap: 30px;
+  row-gap: 70px;
+}
+
+.testimonials .container .card {
+  position: relative;
+  background-color: #222;
+  padding: 20px;
+  border-radius: 6px;
+  box-shadow: 0 0 10px #555;
+  padding: 20px 20px 10px 20px;
+  color: #ececec;
+  transition: var(--main-transition);
+}
+
+.testimonials .container .card:hover {
+  box-shadow: 0 0 12px var(--box-shadow-color);
+  transform: translateY(-10px);
+}
+
+.testimonials .container .card:hover .image {
+  /* animation: rot .3s ease-in-out; */
+  box-shadow: 0 0 20px #111;
+}
+
+@keyframes rot {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.testimonials .container .card .image {
+  position: absolute;
+  top: -50px;
+  right: -10px;
+  width: 100px;
+  height: 100px;
+  padding: 10px;
+  border-radius: 50%;
+  background-color: #111;
+  cursor: pointer;
+  transition: var(--main-transition);
+}
+
+.testimonials .container .card .image img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+.testimonials .container .card h3 {
+  cursor: pointer;
+  width: fit-content;
+  transition: var(--main-transition);
+  color: var(--main-color);
+}
+
+.testimonials .container .card h3:hover {
+  color: var(--hover-color);
+}
+
+.testimonials .container .card p {
+  font-size: 15px;
+  padding: 8px 0;
+  color: var(--gray-color);
+  line-height: 1.6;
+}
+
+.testimonials .container .card p.specialty {
+  color: var(--hover-color);
+}
+
+.testimonials .container .card .stars .fa-solid {
+  color: #FFC107;
 }
 /* End Testimonials */
