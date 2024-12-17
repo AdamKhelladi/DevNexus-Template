@@ -78,6 +78,7 @@ ul {
   letter-spacing: -1.7px;
   border: 2px solid var(--main-color);
   transition: var(--main-transition);
+  z-index: 999;
 }
 
 .main-title:hover {
@@ -537,5 +538,237 @@ ul {
 /* End Article */
 
 /* Start Gallery */
+.gallery {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+  background-color: #111;
+}
 
+.gallery .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 40px;
+}
+
+.gallery .container .box {
+  padding: 20px;
+  background-color: #222;
+  box-shadow: 0 0 10px #444;
+
+}
+
+.gallery .container .box .image {
+  overflow: hidden;
+  position: relative;
+}
+
+.gallery .container .box .image::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 0%;
+  height: 0%;
+  background-color: rgba(255, 255, 255, 20%);
+  transition: .1s;
+  z-index: 1;
+}
+
+.gallery .container .box .image:hover::before {
+  animation: flashing .7s;
+}
+
+@keyframes flashing {
+  0%, 40% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    width: 200%;
+    height: 200%;
+  }
+}
+
+.gallery .container .box .image img {
+  max-width: 100%;
+  transition: var(--main-transition);
+}
+
+.gallery .container .box .image:hover img {
+  transform: rotate(5deg) scale(1.1);
+}
 /* Start Gallery */
+
+/* Start Features */
+.features {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+}
+
+.features .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 40px;
+}
+
+.features .container .box {
+  background-color: #111;
+  box-shadow: 0 0 10px #444;
+  border-radius: 6px;
+  overflow: hidden;
+  transition: var(--main-transition);
+}
+
+.features .container .box .image {
+  position: relative;
+  overflow: hidden;
+}
+
+.features .container .box .image img {
+  max-width: 100%;
+}
+
+.features .container .box .image::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: calc(100% - 2px);
+  opacity: .3;
+}
+
+.features .container .box.quality .image::before {
+  background-color: #ff3c00;
+}
+.features .container .box.time .image::before {
+  background-color: #00ffc8;
+}
+.features .container .box.passion .image::before {
+  background-color: #ff004c;
+}
+
+.features .container .box .image::after {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  right: 0;
+  border-style: solid;
+  border-width: 0px 0px 170px 500px;
+  border-color: transparent transparent #111 transparent;
+  transition: var(--main-transition);
+}
+
+.features .container .box:hover .image::after {
+  border-width: 170px 500px 170px 0px;
+}
+
+.features .container .box .details {
+  text-align: center;
+}
+
+.features .container .box .details h1 {
+  color: #ececec;
+  font-size: 40px;
+  letter-spacing: -2px;
+  font-weight: 700;
+  padding-bottom: 10px;
+  width: fit-content;
+  margin: 0 auto;
+  position: relative;
+}
+
+.features .container .box .details h1::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 15%;
+  width: 70%;
+  height: 6px;
+}
+
+.features .container .box.quality .details h1::before {
+  background-color: #ff3c00;
+}
+.features .container .box.time .details h1::before {
+  background-color: #00ffc8;
+}
+.features .container .box.passion .details h1::before {
+  background-color: #ff004c;
+}
+
+.features .container .box .details p {
+  color: #888;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.8;
+  padding: 30px 10px;
+}
+
+.features .container .box button {
+  color: #ececec;
+  margin: 20px auto;
+  display: block;
+  border: 3px solid;
+  padding: 10px 23px;
+  background-color: transparent;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 22px;
+  cursor: pointer;
+  position: relative;
+  transition: var(--main-transition);
+}
+
+.features .container .box.quality button {
+  border-color: #ff3c00;
+}
+.features .container .box.quality button {
+  color: #ff3c00;
+}
+
+.features .container .box.time button {
+  border-color: #00ffc8;
+}
+.features .container .box.time button {
+  color: #00ffc8;
+}
+
+.features .container .box.passion button {
+  border-color: #ff004c;
+}
+.features .container .box.passion button {
+  color: #ff004c;
+}
+
+.features .container .box button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  transition: var(--main-transition);
+  /* z-index: -1; */
+}
+
+.features .container .box.box.quality button::before {
+  background-color: #ff3c00;
+}
+.features .container .box.box.time button::before {
+  background-color: #00ffc8;
+}
+.features .container .box.box.passion button::before {
+  background-color: #ff004c;
+}
+
+.features .container .box:hover button::before {
+  width: 100%;
+}
+.features .container .box:hover button {
+  color: #ececec;
+}
+
+/* End Features */
