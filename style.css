@@ -1005,3 +1005,126 @@ ul {
   }
 }
 /* End Team Members */
+
+/* Start Services */
+.services {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+  background-color: #111
+}
+
+.services .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 40px;
+}
+
+.services .container .box {
+  background-color: #222;
+  box-shadow: 0 0 8px #333;
+  position: relative;
+  counter-increment: services;
+  transition: var(--main-transition);
+}
+
+.services .container .box:hover {
+  box-shadow: 0 0 8px var(--box-shadow-color);
+  transform: translateY(-10px);
+}
+
+.services .container .box::before {
+  content: "";
+  position: absolute;
+  top: -3px;
+  right: 50%;
+  width: 0;
+  height: 3px;
+  background-color: var(--main-color);
+  transition: var(--main-transition);
+}
+.services .container .box:hover::before {
+  width: 50%;
+  box-shadow: 0 0 80px var(--box-shadow-color);
+}
+
+.services .container .box::after {
+  content: "";
+  position: absolute;
+  top: -3px;
+  left: 50%;
+  width: 0;
+  height: 3px;
+  background-color: var(--main-color);
+  transition: var(--main-transition);
+}
+.services .container .box:hover::after {
+  width: 50%;
+  box-shadow: 0 0 20px var(--box-shadow-color);
+}
+
+.services .container .box i {
+  color: #777;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 30px;
+  padding-bottom: 20px;
+}
+
+.services .container .box h3 {
+  color: var(--main-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  font-weight: 700;
+  letter-spacing: -1.7px;
+  padding-bottom: 40px;
+}
+
+.services .container .box .info {
+  padding: 15px;
+  position: relative;
+  background-color: #292929;
+  text-align: right;
+  transition: var(--main-transition);
+}
+
+.services .container .box .info::before {
+  content: "0" counter(services);
+  position: absolute;
+  background-color: var(--main-color);
+  color: #111;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 80px;
+  font-size: 30px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-right: 15px;
+}
+
+.services .container .box .info::after {
+  content: "";
+  position: absolute;
+  background-color: #333;
+  top: 0;
+  left: 80px;
+  width: 50px;
+  height: calc(100% + 0.4px);
+  transform: skew(-30deg);
+}
+
+.services .container .box .info a {
+  color: var(--main-color);
+  transition: var(--main-transition);
+}
+
+.services .container .box .info a:hover {
+  color: var(--hover-color);
+}
+
+/* End Services */
