@@ -1183,8 +1183,7 @@ ul {
 .our-skills .container .skills .skill .progress span {
   position: absolute;
   height: 100%;
-  background-color: var(--hover-color);
-
+  background-color: var(--main-color);
 }
 
 @media (max-width: 992px) {
@@ -1397,7 +1396,63 @@ ul {
 }
 
 .events .container .subscribe {
+  margin-top: 20px;
+  padding: 30px;
   width: 100%;
+  background-color: #11111167;
+  border-radius: 6px;
+  border: 1px solid #222;
+  box-shadow: 0 0 10px #333;
+  transition: var(--main-transition);
+}
+
+.events .container .subscribe form input {
+  display: block;
+  margin: 10px auto;
+  width: 50%;
+  padding: 20px;
+  border: none;
+  border-radius: 6px;
+  background-color: #111;
+  color: #ececec;
+  font-size: 15px;
+  font-weight: 600;
+  outline: none;
+  transition: var(--main-transition);
+}
+
+.events .container .subscribe form textarea {
+  display: block;
+  margin: 10px auto;
+  width: 50%;
+  height: 200px;
+  padding: 20px;
+  border: none;
+  border-radius: 6px;
+  background-color: #111;
+  color: #ececec;
+  font-size: 15px;
+  font-weight: 600;
+  outline: none;
+  transition: var(--main-transition);
+  resize: none;
+}
+.events .container .subscribe form textarea:focus,
+.events .container .subscribe form input:not(.sub):focus {
+  width: 51%;
+  box-shadow: 0 0 20px #222 inset;
+}
+
+.events .container .subscribe form .sub {
+  font-size: 18px;
+  font-weight: bold;
+  color: black;
+  cursor: pointer;
+  background-color: var(--main-color);
+  transition: var(--main-transition);
+}
+.events .container .subscribe form .sub:hover {
+  background-color: var(--hover-color);
 }
 
 @media (max-width: 992px) {
@@ -1407,14 +1462,27 @@ ul {
   .events .container .info {
     text-align: center;
   }
+  .events .container .info .text {
+    margin-bottom: 40px;
+  }
   .events .container .info .text h3 {
     font-size: 27px;
-    margin-top: 40px;
   }
   .events .container .info .text p {
     font-size: 14px;
   }
+  .events .container .subscribe form input {
+    width: 90%;
+  }
+  .events .container .subscribe form textarea {
+    width: 90%;
+  }
+  .events .container .subscribe form textarea:focus,
+  .events .container .subscribe form input:not(.sub):focus {
+    width: 91%;
+  }
 }
+
 @media (max-width: 667px) {
   .events .container .info .text h3 {
     font-size: 27px;
