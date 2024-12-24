@@ -1,9 +1,9 @@
 /* Start Var */
 :root {
-  --main-color: #00e6c0;
+  --main-color: #00d7e6;
   --secondary-color: #111;
-  --hover-color: #00ac86;
-  --box-shadow-color: #00d4b19f;
+  --hover-color: #00aab6;
+  --box-shadow-color: #00aab69d;
   --gray-color: #cacaca;
   --main-transition: .3s;
   --section-padding: 100px;
@@ -361,7 +361,6 @@ ul {
   height: 100%;
   width: 100%;
   background-color: #111;
-  /* background-color: #0100444d; */
   z-index: -1;
   transform: skewY(-6deg);
   transform-origin: top left;
@@ -407,7 +406,6 @@ ul {
   }
 }
 
-
 .landing .go-down {
   position: absolute;
   bottom: 30px;
@@ -444,6 +442,22 @@ ul {
 }
 
 @media (max-width: 992px) {
+  .landing::before {
+    background-image: url(media/land2.jpg);
+    background-size: cover;
+    opacity: 0.4;
+    height: 100%;
+  }
+  .landing .container .text {
+    margin: 0;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -180%);
+    text-align: center;
+    width: 800px;
+    max-width: 100%;
+  }
   .landing .container .image {
     display: none;
   }
@@ -463,6 +477,16 @@ ul {
   }
   .landing .container .text p {
     font-size: 18px;
+  }
+  .landing .container .text {
+    margin: 0;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -120%);
+    text-align: center;
+    width: 400px;
+    max-width: 100%;
   }
 }
 /* End landing */
