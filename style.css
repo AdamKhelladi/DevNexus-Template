@@ -469,6 +469,12 @@ ul {
 }
 
 @media (max-width: 768px) {
+  .landing::before {
+    height: 90%;
+  }
+  .landing .go-down {
+    bottom: 50px;
+  }
   .landing .container .text h1 {
     font-size: 28px;
   }
@@ -477,16 +483,6 @@ ul {
   }
   .landing .container .text p {
     font-size: 18px;
-  }
-  .landing .container .text {
-    margin: 0;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -120%);
-    text-align: center;
-    width: 400px;
-    max-width: 100%;
   }
 }
 /* End landing */
