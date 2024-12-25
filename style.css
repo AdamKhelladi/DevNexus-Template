@@ -2182,11 +2182,16 @@ ul {
 
 .footer .container .box .icons a {
   text-decoration: none;
-  padding: 15px;
   background-color: #333;
   margin-right: 12px;
   transition: var(--main-transition);
   border-radius: 6px;
+
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .footer .container .box .icons a:hover i {
@@ -2289,19 +2294,15 @@ ul {
 }
 
 .footer .copyright {
+  color: #ececec;
   text-align: center;
   margin: 0;
   padding: 25px 0;
-  border-top: 1px solid #444;
+  border-top: 1px solid #333;
   letter-spacing: -0.4px;
   font-size: 15px;
   font-weight: 400;
   transition: var(--main-transition);
-}
-
-.footer .copyright:hover {
-  box-shadow: 0 2px 15px rgba(255, 255, 255, 35%);
-  font-size: 15.3px;
 }
 
 @media (max-width: 767px) {
