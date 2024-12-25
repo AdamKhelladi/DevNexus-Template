@@ -103,6 +103,30 @@ ul {
   linear-gradient(223deg, black 25%, transparent 25%);
   background-size: 40px 40px;
 }
+
+.dots {
+  background-image: url(media/dots.png);
+  height: 186px;
+  width: 204px;
+  background-repeat: no-repeat;
+  position: absolute;
+}
+
+.dots-up {
+  right: 0;
+  top: 200px;
+}
+
+.dots-down {
+  left: 0;
+  bottom: 200px;
+}
+
+@media (max-width: 667px) {
+  .dots {
+    display: none;
+  }
+}
 /* End Global Rules */
 
 /* Start Components */
@@ -1576,6 +1600,7 @@ ul {
   padding-top: var(--section-padding);
   padding-bottom: var(--section-padding);
   background-color: #111;
+  position: relative;
 }
 
 .pricing .container {
