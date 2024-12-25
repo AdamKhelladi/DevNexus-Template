@@ -1921,6 +1921,9 @@ ul {
 }
 
 @media (max-width: 667px) {
+  .stats {
+    background-image: url(media/stats2.jpg);
+  }
   .stats .title {
     font-size: 30px;
   }
