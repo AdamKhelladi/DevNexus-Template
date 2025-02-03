@@ -208,7 +208,7 @@ ul {
 }
 /* Start Components */
 
-/* Start Animation Blocks */
+/* Start Animation Blocks */  
 @keyframes appear {
   form {
     opacity: 0;
