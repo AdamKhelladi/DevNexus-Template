@@ -369,6 +369,7 @@ ul {
   top: calc(100% + 1px);
 }
 
+/* Media  */
 @media(max-width: 768px) {
   .header .container {
     height: 80px;
