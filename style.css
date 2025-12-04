@@ -1966,6 +1966,7 @@ ul {
   letter-spacing: -0.5px;
 }
 
+/* Media */
 @media (max-width: 667px) {
   .stats .title {
     font-size: 30px;
