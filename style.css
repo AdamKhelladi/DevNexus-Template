@@ -398,6 +398,7 @@ ul {
   }
 }
 
+/* Media */
 @media(max-width: 992px) {
   .header .container .mega-menu .image {
     display: none;
