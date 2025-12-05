@@ -46,7 +46,6 @@ ul {
 }
 ::-webkit-scrollbar-track {
   background-color: #222;
-  /* box-shadow: 0 0 11px #555 inset; */
   border-radius: 100vw;
   margin-block: 15px;
 }
