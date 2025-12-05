@@ -306,7 +306,6 @@ ul {
   background-color: var(--secondary-color);
   border-bottom: 4px solid var(--main-color);
   padding: 20px;
-  
   transition: top var(--main-transition), opacity var(--main-transition);
   opacity: 0;
   z-index: -1;
@@ -397,7 +396,6 @@ ul {
   }
 }
 
-/* Media */
 @media(max-width: 992px) {
   .header .container .mega-menu .image {
     display: none;
