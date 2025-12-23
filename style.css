@@ -80,7 +80,7 @@ ul {
     width: 970px;
   }
 }
-/* Large */
+/* Large Media */
 @media (min-width: 1200px) {
   .container {
     width: 1170px;
