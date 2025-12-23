@@ -68,7 +68,7 @@ ul {
   margin-right: auto;
 }
 
-/* Small */
+/* Small Media */
 @media (min-width: 768px) {
   .container {
     width: 750px;
