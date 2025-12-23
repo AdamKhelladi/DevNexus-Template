@@ -74,7 +74,7 @@ ul {
     width: 750px;
   }
 }
-/* Medium */
+/* Medium Media */
 @media (min-width: 992px) {
   .container {
     width: 970px;
